@@ -37,3 +37,14 @@ const makeChange = n => {
 };
 
 // or
+
+const makeChange = (amount) => {
+  let values = { H: 50, Q: 25, D: 10, N: 5, P: 1 };
+  let hash = {};
+  for (const [key, value] of Object.entries(values)) {
+    const newKey = Math.floor(amount / value);
+    if (newKey !== 0) hash[key] = newKey;
+    amount = amount % value;
+  }
+  return hash;
+};
