@@ -35,3 +35,5 @@ const makeChange = n => {
       return o
   },{})
 };
+
+// or
