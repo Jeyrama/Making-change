@@ -19,3 +19,19 @@ Examples:
 
 
 // Solution
+
+const makeChange = n => {
+  let H = Math.floor(n/50);
+  n -= (50*H);
+  let Q = Math.floor(n/25);
+  n -= (25*Q);
+  let D = Math.floor(n/10);
+  n -= (10*D);
+  let N = Math.floor(n/5);
+  n-= (5*N);
+  let obj = {H,Q,D,N,P:n}
+  return Object.keys(obj).filter(k=>obj[k]).reduce((o,k)=>{
+      o[k] = obj[k];
+      return o
+  },{})
+};
