@@ -20,7 +20,7 @@ Examples:
 
 // Solution
 
-const makeChange = n => {
+const makingChange = n => {
   let H = Math.floor(n/50);
   n -= (50*H);
   let Q = Math.floor(n/25);
